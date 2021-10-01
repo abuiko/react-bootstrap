@@ -7,6 +7,7 @@ import { Basket } from "./Basket";
 import { NoMatch } from "./NoMatch";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
+import { Slider } from "./components/Carousel";
 
 
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <React.Fragment>
       <NavigationBar />
+      <Slider />
       <Layout>
         <Router>
           <Switch>
