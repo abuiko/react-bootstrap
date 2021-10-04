@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
 import { Home } from "./Home";
 import { User } from "./User";
 import { Favorites } from "./Favorites";
@@ -14,9 +15,10 @@ import { Slider } from "./components/Carousel";
 function App() {
   return (
     <React.Fragment>
-      <NavigationBar />
-      <Slider />
+
       <Layout>
+        <NavigationBar />
+        <Slider />
         <Router>
           <Switch>
             <Route exact path="/" component={Home}></Route>
