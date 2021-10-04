@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import { Home } from "./Home";
 import { User } from "./User";
 import { Favorites } from "./Favorites";
@@ -8,7 +8,8 @@ import { Basket } from "./Basket";
 import { NoMatch } from "./NoMatch";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
-import { Slider } from "./components/Carousel";
+import { Jumbotron } from "./components/Jumbotron";
+// import { Gallery } from "./components/ClothesGallery";
 
 
 
@@ -18,7 +19,7 @@ function App() {
 
       <Layout>
         <NavigationBar />
-        <Slider />
+        <Jumbotron />
         <Router>
           <Switch>
             <Route exact path="/" component={Home}></Route>
