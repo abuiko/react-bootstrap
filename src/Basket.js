@@ -7,6 +7,14 @@ import Paypal from "./assets/paypal.png";
 import Visa from "./assets/visa.png";
 
 const Styles = styled.div`
+
+    .cart {
+        
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .total-area {
         display: flex;
         justify-content: space-between;
@@ -38,37 +46,40 @@ export const Basket = () => {
     return (
 
         <Styles>
-            <Container>
-                <Row>
-                    <Col md="6" sm="12">
-                        <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
-                        <p>Sign in/Become a member to save or access saved items in your shopping bag.</p>
-                        <a href="/" className="text-dark signin-btn">Sign in/Become a member</a>
-                    </Col>
-                    <Col md="6" sm="12" className="gray-bg">
-                        <Button type="button" variant="outline-dark" size="lg">Sign in/Become a member</Button>
-                        <hr />
-                        <div className="total-area">
-                            <h4>Total</h4>
-                            <h4 id="total">0.00$</h4>
-                        </div>
-                        <Button type="button" variant="secondary" size="lg">Continue to Checkout</Button>
-                        <div className="banks">
-                            <p>We accept</p>
-                            <div className="bank-logos">
-                                <Image src={American} className="b-logo" />
-                                <Image src={Visa} className="b-logo" />
-                                <Image src={Paypal} className="b-logo" />
-                                <Image src={Amex} className="b-logo" />
-
+            <div className="cart">
+                <Container className="p-4">
+                    <Row>
+                        <Col md="6" sm="12">
+                            <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
+                            <p>Sign in/Become a member to save or access saved items in your shopping bag.</p>
+                            <a href="/" className="text-dark signin-btn">Sign in/Become a member</a>
+                        </Col>
+                        <Col md="6" sm="12" className="gray-bg">
+                            <Button type="button" variant="outline-dark" size="lg">Sign in/Become a member</Button>
+                            <hr />
+                            <div className="total-area">
+                                <h4>Total</h4>
+                                <h4 id="total">0.00$</h4>
                             </div>
-                            <p>The estimated tax will be confirmed once you added your shipping address in checkout.</p>
-                        </div>
+                            <Button type="button" variant="secondary" size="lg">Continue to Checkout</Button>
+                            <div className="banks">
+                                <p>We accept</p>
+                                <div className="bank-logos">
+                                    <Image src={American} className="b-logo" />
+                                    <Image src={Visa} className="b-logo" />
+                                    <Image src={Paypal} className="b-logo" />
+                                    <Image src={Amex} className="b-logo" />
 
-                    </Col>
-                </Row>
+                                </div>
+                                <p>The estimated tax will be confirmed once you added your shipping address in checkout.</p>
+                            </div>
 
-            </Container>
+                        </Col>
+                    </Row>
+
+                </Container>
+            </div>
+
         </Styles>
 
     )
