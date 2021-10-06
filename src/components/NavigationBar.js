@@ -1,5 +1,9 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -29,9 +33,9 @@ export const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Item><Nav.Link className="nav-link" href="/user">User</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link className="nav-link" href="/favorites">Favorites</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link className="nav-link" href="/basket">Basket</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link className="nav-link" href="/user"> <FontAwesomeIcon icon={faUserAlt} /></Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link className="nav-link" href="/favorites"><FontAwesomeIcon icon={faHeart} /></Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link className="nav-link" href="/basket"><FontAwesomeIcon icon={faShoppingCart} /></Nav.Link></Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
