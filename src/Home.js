@@ -9,12 +9,14 @@ import Banner from "./assets/bannerImage.jpg";
 
 const Styles = styled.div`
    .banner {
-        background: url(${Banner}) no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 500px;
+        
         margin: 0.2rem;
+        background: #000;
+        padding: 1rem;
+        color: #fff;
+        text-align: center;
    }
+   
   
     .tops {
         height: 700px;
@@ -47,7 +49,9 @@ export const Home = () => {
             <Container fluid className="img-container">
                 <Row>
 
-                    <Col className="banner"></Col>
+                    <Col className="banner">
+                        <h2>Fall Sale: new price cuts added Up to 50% off can't-miss picks!</h2>
+                    </Col>
                 </Row>
                 <Row>
 
