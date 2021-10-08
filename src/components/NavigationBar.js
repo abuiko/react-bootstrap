@@ -17,6 +17,19 @@ const Styles = styled.div`
         margin-left: auto;
        
     }
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3rem;
+        
+    }
+    .nav-link p {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+        color: #000;
+    }
     .navbar-brand, .navbar-nav, .nav-link {
         color: #000;
 
@@ -26,8 +39,8 @@ const Styles = styled.div`
     }
 
     .fa-icon {
-        font-size: 1.4rem;
-        margin-left: 3rem;
+        font-size: 1.2rem;
+        color: #000;
     }
     
 `;
@@ -41,9 +54,25 @@ export const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Item><Nav.Link className="nav-link" href="/user"> <FontAwesomeIcon className="fa-icon" icon={faUserAlt} /></Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link className="nav-link" href="/favorites"><FontAwesomeIcon className="fa-icon" icon={faHeart} /></Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link className="nav-link" href="/basket"><FontAwesomeIcon className="fa-icon" icon={faShoppingCart} /></Nav.Link></Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="nav-link" href="/user">
+                                <FontAwesomeIcon className="fa-icon" icon={faUserAlt} />
+                                <p>Sign In</p>
+                            </Nav.Link>
+
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="nav-link" href="/favorites">
+                                <FontAwesomeIcon className="fa-icon" icon={faHeart} />
+                                <p>Favorites</p>
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link className="nav-link" href="/basket">
+                                <FontAwesomeIcon className="fa-icon" icon={faShoppingCart} />
+                                <p>Shopping Cart</p>
+                            </Nav.Link>
+                        </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
