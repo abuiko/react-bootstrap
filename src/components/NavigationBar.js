@@ -10,24 +10,22 @@ const Styles = styled.div`
 
     .navbar {
         background-color: #fff;
-        padding: 2rem 1rem;
-        
+        padding: 1.2rem 0.5rem 1rem;      
     }
     .ml-auto {
-        margin-left: auto;
-       
+        margin-left: auto;       
     }
     .nav-link {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 3rem;
-        
+        margin-left: 3rem;        
     }
     .nav-link p {
         font-size: 0.9rem;
         margin-top: 0.4rem;
+        margin-bottom: 0rem;
         color: #000;
     }
     .navbar-brand, .navbar-nav, .nav-link {
@@ -37,7 +35,6 @@ const Styles = styled.div`
             color: #bbb;
         }
     }
-
     .fa-icon {
         font-size: 1.2rem;
         color: #000;

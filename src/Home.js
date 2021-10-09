@@ -1,21 +1,28 @@
 import React from 'react';
-// import { Jumbotron } from "./components/Jumbotron";
-import { Row, Col, Button, Container, Tooltip } from "react-bootstrap";
+import { Footer } from './components/Footer'
+import { Row, Col, Button, Container } from "react-bootstrap";
 import styled from "styled-components";
 import Dress from "./gallery/dress-main.jpeg";
 import Jeans from "./gallery/jeans.jpeg";
 import Top from "./gallery/tops.jpeg";
-import Banner from "./assets/bannerImage.jpg";
+
 
 const Styles = styled.div`
    .banner {
         
         margin: 0.2rem;
-        background: #000;
-        padding: 1rem;
+        background-color: #28262B;
+        padding: 1.5rem;
         color: #fff;
         text-align: center;
+       
    }
+   .banner h2 {
+       font-size: 1.8rem;
+       margin-bottom: 0rem;
+       letter-spacing: 0.1rem;
+   }
+
    
   
     .tops {
@@ -79,6 +86,8 @@ export const Home = () => {
 
                 </Row>
             </Container>
+            <Footer />
         </Styles>
+
     )
 }
