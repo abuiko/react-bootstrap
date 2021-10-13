@@ -9,10 +9,9 @@ import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
 const Styles = styled.div`
     .container {
-        padding: 2.5rem 0.7rem;
+        padding: 5.5rem 0.7rem;
     }
     .footer-icons {
-        height: 500px;
         display: flex;
         justify-content: space-around;
         align-items: center;      
@@ -21,7 +20,7 @@ const Styles = styled.div`
         text-align: center;
     }
     .footer-icon {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin-bottom: 1.2rem;
     }
     .f-icon-group h3 {
@@ -38,6 +37,9 @@ const Styles = styled.div`
         }
         .f-icon-group h3 {
             font-size: 1.1rem;
+        }
+        .container {
+            padding: 2.5rem 0.7rem;
         }
     }
 

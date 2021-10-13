@@ -22,8 +22,6 @@ const Styles = styled.div`
        margin-bottom: 0rem;
        letter-spacing: 0.1rem;
    }
-
-   
   
     .tops {
         
@@ -35,12 +33,11 @@ const Styles = styled.div`
         
     }
     .jeans {
-        background: url(${Jeans}) no-repeat;
-        
+        background: url(${Jeans}) no-repeat;     
     }
 
     .tops, .dresses, .jeans {
-        height: 700px;
+        height: 600px;
         background-size: cover;
         background-position: center;
         display: flex;

@@ -1,19 +1,24 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import styled from "styled-components";
+import Logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import styled from "styled-components";
+
 
 const Styles = styled.div`
 
     .navbar {
         background-color: #fff;
-        padding: 1.2rem 0.5rem 1rem;      
+        padding: 1.2rem 1rem 1rem;      
     }
     .ml-auto {
         margin-left: auto;       
+    }
+    .logo {
+        width: 2.6rem;
     }
     .nav-link {
         display: flex;
@@ -47,7 +52,7 @@ export const NavigationBar = () => {
     return (
         <Styles>
             <Navbar expand="lg" className="navbar">
-                <Navbar.Brand href="/">Logo</Navbar.Brand>
+                <Navbar.Brand href="/"><img className="logo" src={Logo} /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
