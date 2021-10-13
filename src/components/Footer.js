@@ -1,4 +1,5 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyCheck } from '@fortawesome/free-solid-svg-icons';
@@ -35,25 +36,25 @@ const Styles = styled.div`
 export const Footer = () => {
     return (
         <Styles>
-            <div className="footer-icons">
-                <div className="f-icon-group">
+            <Row className="footer-icons">
+                <Col sm className="f-icon-group">
                     <FontAwesomeIcon className="footer-icon" icon={faMoneyCheck} />
                     <h3>Payment</h3>
                     <p>Choose from different payment methods</p>
-                </div>
+                </Col>
 
-                <div className="f-icon-group">
+                <Col sm className="f-icon-group">
                     <FontAwesomeIcon className="footer-icon" icon={faTruck} />
                     <h3>Shipping</h3>
                     <p>Standard delivery 3 working days</p>
-                </div>
-                <div className="f-icon-group">
+                </Col>
+                <Col sm className="f-icon-group">
                     <FontAwesomeIcon className="footer-icon" icon={faRedo} />
                     <h3>Returns</h3>
                     <p>Return by mail</p>
-                </div>
+                </Col>
 
-            </div>
+            </Row>
         </Styles>
 
     )
