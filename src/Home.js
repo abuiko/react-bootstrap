@@ -26,7 +26,7 @@ const Styles = styled.div`
    
   
     .tops {
-        height: 700px;
+        
         background: url(${Top}) no-repeat;
         
     }
@@ -40,6 +40,7 @@ const Styles = styled.div`
     }
 
     .tops, .dresses, .jeans {
+        height: 700px;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -48,6 +49,15 @@ const Styles = styled.div`
         text-align: center;
         margin: 0.2rem;
     }   
+
+    @media only screen and (max-width: 500px) {
+        .tops, .dresses, .jeans {
+            height: 450px;
+        }
+        .banner h2 {
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const Home = () => {

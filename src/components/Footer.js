@@ -8,7 +8,9 @@ import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
 
 const Styles = styled.div`
-
+    .container {
+        padding: 2.5rem 0.7rem;
+    }
     .footer-icons {
         height: 500px;
         display: flex;
@@ -30,31 +32,43 @@ const Styles = styled.div`
         font-size: 0.9rem;
     }
 
+    @media only screen and (max-width: 500px) {
+        .footer-icon {
+            font-size: 1.2rem;
+        }
+        .f-icon-group h3 {
+            font-size: 1.1rem;
+        }
+    }
+
 
 `;
 
 export const Footer = () => {
     return (
         <Styles>
-            <Row className="footer-icons">
-                <Col sm className="f-icon-group">
-                    <FontAwesomeIcon className="footer-icon" icon={faMoneyCheck} />
-                    <h3>Payment</h3>
-                    <p>Choose from different payment methods</p>
-                </Col>
+            <div className="container">
+                <Row className="footer-icons">
+                    <Col sm className="f-icon-group">
+                        <FontAwesomeIcon className="footer-icon" icon={faMoneyCheck} />
+                        <h3>Payment</h3>
+                        <p>Choose from different payment methods</p>
+                    </Col>
 
-                <Col sm className="f-icon-group">
-                    <FontAwesomeIcon className="footer-icon" icon={faTruck} />
-                    <h3>Shipping</h3>
-                    <p>Standard delivery 3 working days</p>
-                </Col>
-                <Col sm className="f-icon-group">
-                    <FontAwesomeIcon className="footer-icon" icon={faRedo} />
-                    <h3>Returns</h3>
-                    <p>Return by mail</p>
-                </Col>
+                    <Col sm className="f-icon-group">
+                        <FontAwesomeIcon className="footer-icon" icon={faTruck} />
+                        <h3>Shipping</h3>
+                        <p>Standard delivery 3 working days</p>
+                    </Col>
+                    <Col sm className="f-icon-group">
+                        <FontAwesomeIcon className="footer-icon" icon={faRedo} />
+                        <h3>Returns</h3>
+                        <p>Return by mail during 30 days after purchase</p>
+                    </Col>
 
-            </Row>
+                </Row>
+            </div>
+
         </Styles>
 
     )
