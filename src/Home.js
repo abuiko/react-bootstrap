@@ -2,9 +2,9 @@ import React from 'react';
 import { Footer } from './components/Footer'
 import { Row, Col, Button, Container } from "react-bootstrap";
 import styled from "styled-components";
-import Dress from "./gallery/dress-main.jpeg";
-import Jeans from "./gallery/jeans.jpeg";
-import Top from "./gallery/tops.jpeg";
+import Dress from "./images/dress-main.jpeg";
+import Jeans from "./images/jeans.jpeg";
+import Top from "./images/tops.jpeg";
 
 
 const Styles = styled.div`

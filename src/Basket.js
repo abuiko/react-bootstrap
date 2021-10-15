@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Col, Row, Button, Image } from "react-bootstrap";
 import styled from "styled-components";
-import Amex from "./assets/amex.png";
-import American from "./assets/american-express.png";
-import Paypal from "./assets/paypal.png";
-import Visa from "./assets/visa.png";
+import Amex from "./icons/amex.png";
+import American from "./icons/american-express.png";
+import Paypal from "./icons/paypal.png";
+import Visa from "./icons/visa.png";
 
 const Styles = styled.div`
 

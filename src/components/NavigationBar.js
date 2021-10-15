@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Navbar, Image } from "react-bootstrap";
 import styled from "styled-components";
-import Logo from '../assets/logo.png';
+import Logo from '../icons/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
@@ -74,7 +74,7 @@ export const NavigationBar = () => {
                         <Nav.Item>
                             <Nav.Link className="nav-link" href="/basket">
                                 <FontAwesomeIcon className="fa-icon" icon={faShoppingCart} />
-                                <p>Shopping Cart</p>
+                                <p>Cart</p>
                             </Nav.Link>
                         </Nav.Item>
                     </Nav>
