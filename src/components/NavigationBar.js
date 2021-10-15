@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, Image } from "react-bootstrap";
 import styled from "styled-components";
 import Logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,7 @@ const Styles = styled.div`
 
     .navbar {
         background-color: #fff;
-        padding: 1.2rem 1rem 1rem;      
+        padding: 1.2rem 2rem 1rem;      
     }
     .ml-auto {
         margin-left: auto;       
@@ -52,7 +52,9 @@ export const NavigationBar = () => {
     return (
         <Styles>
             <Navbar expand="lg" className="navbar">
-                <Navbar.Brand href="/"><img className="logo" src={Logo} /></Navbar.Brand>
+                <Navbar.Brand href="/">
+                    <Image src={Logo} className="logo" />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">

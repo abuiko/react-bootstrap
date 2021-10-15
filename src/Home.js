@@ -47,12 +47,21 @@ const Styles = styled.div`
         margin: 0.2rem;
     }   
 
+    .tops h2, .dresses h2, .jeans h2 {
+        font-size: 3.3rem;
+        font-weight: bolder;
+    }
+
     @media only screen and (max-width: 500px) {
         .tops, .dresses, .jeans {
             height: 450px;
         }
         .banner h2 {
             font-size: 1rem;
+        }
+        .tops h2, .dresses h2, .jeans h2 {
+            font-size: 1.7rem;
+            
         }
     }
 `;

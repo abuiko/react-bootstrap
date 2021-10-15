@@ -16,8 +16,6 @@ const Styles = styled.div`
     }
 `;
 
-
-
 export const Favorites = () => {
     return (
         <Styles>

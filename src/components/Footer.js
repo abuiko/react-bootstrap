@@ -10,6 +10,7 @@ import { faRedo } from '@fortawesome/free-solid-svg-icons';
 const Styles = styled.div`
     .container {
         padding: 5.5rem 0.7rem;
+        
     }
     .footer-icons {
         display: flex;
