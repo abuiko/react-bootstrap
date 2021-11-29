@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { Nav, Navbar, Image } from "react-bootstrap";
 import styled from "styled-components";
 import Logo from '../assets/icons/logo.png';
@@ -52,30 +53,41 @@ export const NavigationBar = () => {
     return (
         <Styles>
             <Navbar expand="lg" className="navbar">
-                <Navbar.Brand href="/">
-                    <Image src={Logo} className="logo" />
-                </Navbar.Brand>
+                <Link to="/">
+                    <Navbar.Brand>
+                        <Image src={Logo} className="logo" />
+                    </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Nav.Item>
-                            <Nav.Link className="nav-link" href="/user">
-                                <FontAwesomeIcon className="fa-icon" icon={faUserAlt} />
-                                <p>Sign In</p>
+
+                            <Nav.Link className="nav-link">
+                                <Link to="/user">
+                                    <FontAwesomeIcon className="fa-icon" icon={faUserAlt} />
+                                </Link>
                             </Nav.Link>
 
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link className="nav-link" href="/favorites">
-                                <FontAwesomeIcon className="fa-icon" icon={faHeart} />
-                                <p>Favorites</p>
+
+                            <Nav.Link className="nav-link">
+                                <Link to="/favorites">
+                                    <FontAwesomeIcon className="fa-icon" icon={faHeart} />
+                                </Link>
                             </Nav.Link>
+
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link className="nav-link" href="/basket">
-                                <FontAwesomeIcon className="fa-icon" icon={faShoppingCart} />
-                                <p>Cart</p>
+
+                            <Nav.Link className="nav-link">
+                                <Link to="/basket">
+                                    <FontAwesomeIcon className="fa-icon" icon={faShoppingCart} />
+                                </Link>
                             </Nav.Link>
+
+
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

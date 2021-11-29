@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { User } from "./pages/User";
 import { Favorites } from "./pages/Favorites";
@@ -17,15 +17,25 @@ function App() {
 
       <Layout>
         <NavigationBar />
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/user" component={User}></Route>
-            <Route exact path="/favorites" component={Favorites}></Route>
-            <Route exact path="/basket" component={Basket}></Route>
-            <Route component={NoMatch}></Route>
-          </Switch>
-        </Router>
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/user">
+            <User />
+          </Route>
+          <Route exact path="/favorites">
+            <Favorites />
+          </Route>
+          <Route exact path="/basket">
+            <Basket />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+
       </Layout>
 
     </React.Fragment>

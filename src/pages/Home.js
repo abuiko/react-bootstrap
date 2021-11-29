@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 import { Footer } from '../components/Footer'
 import { Row, Col, Button, Container } from "react-bootstrap";
 import styled from "styled-components";
@@ -82,21 +83,21 @@ export const Home = () => {
                         <div>
                             <h2>Dresses</h2>
                             <p>Evening, Casual, Coctail.</p>
-                            <Button type="button" variant="dark" size="lg">See More</Button>
+                            <Link to=""><Button type="button" variant="dark" size="lg">See More</Button></Link>
                         </div>
                     </Col>
                     <Col sm className="tops">
                         <div>
                             <h2>Tops</h2>
                             <p>Sweaters, Hoodies, Tees, Coats, Jackets.</p>
-                            <Button type="button" variant="dark" size="lg">See More</Button>
+                            <Link to=""><Button type="button" variant="dark" size="lg">See More</Button></Link>
                         </div>
                     </Col>
                     <Col sm className="jeans">
                         <div>
                             <h2>Pants</h2>
                             <p>Jeans, Pant, Shorts, Skirts.</p>
-                            <Button type="button" variant="dark" size="lg">See More</Button>
+                            <Link to=""><Button type="button" variant="dark" size="lg">See More</Button></Link>
                         </div>
                     </Col>
 
