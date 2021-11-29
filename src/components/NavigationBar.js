@@ -48,7 +48,6 @@ const Styles = styled.div`
     
 `;
 
-
 export const NavigationBar = () => {
     return (
         <Styles>

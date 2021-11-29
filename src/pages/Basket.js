@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Col, Row, Button, Image } from "react-bootstrap";
+import { Link } from "react-router-dom"
 import styled from "styled-components";
 import Amex from "../assets/icons/amex.png";
 import American from "../assets/icons/american-express.png";
@@ -21,7 +22,7 @@ const Styles = styled.div`
         margin-bottom: 1.5rem;
     }
     .gray-bg {
-        background: #EBF2FA;
+        background: #F9F9F9;
         padding: 1.5rem;
     }
     .bank-logos {
@@ -52,10 +53,11 @@ export const Basket = () => {
                         <Col md="6" sm="12">
                             <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
                             <p>Sign in/Become a member to save or access saved items in your shopping bag.</p>
-                            <a href="/" className="text-dark signin-btn">Sign in/Become a member</a>
+
+                            <Link to="/user"><Button type="button" variant="outline-dark" size="lg">Sign in/Become a member</Button></Link>
                         </Col>
                         <Col md="6" sm="12" className="gray-bg">
-                            <Button type="button" variant="outline-dark" size="lg">Sign in/Become a member</Button>
+
                             <hr />
                             <div className="total-area">
                                 <h4>Total</h4>
