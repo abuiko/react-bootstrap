@@ -103,7 +103,7 @@ export const Home = () => {
 
                 </Row>
             </Container>
-            <Footer />
+            {/* <Footer /> */}
         </Styles>
 
     )
