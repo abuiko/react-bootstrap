@@ -83,21 +83,21 @@ export const Home = () => {
                         <div>
                             <h2>Dresses</h2>
                             <p>Evening, Casual, Coctail.</p>
-                            <Link to=""><Button type="button" variant="dark" size="lg">See More</Button></Link>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">See More</Button></Link>
                         </div>
                     </Col>
                     <Col sm className="tops">
                         <div>
                             <h2>Tops</h2>
                             <p>Sweaters, Hoodies, Tees, Coats, Jackets.</p>
-                            <Link to=""><Button type="button" variant="dark" size="lg">See More</Button></Link>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">See More</Button></Link>
                         </div>
                     </Col>
                     <Col sm className="jeans">
                         <div>
                             <h2>Pants</h2>
                             <p>Jeans, Pant, Shorts, Skirts.</p>
-                            <Link to=""><Button type="button" variant="dark" size="lg">See More</Button></Link>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">See More</Button></Link>
                         </div>
                     </Col>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
+import Clothes from "./pages/Clothes";
 import { User } from "./pages/User";
 import { Favorites } from "./pages/Favorites";
 import { Basket } from "./pages/Basket";
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/basket">
             <Basket />
+          </Route>
+          <Route exact path="/clothes">
+            <Clothes />
           </Route>
           <Route>
             <NoMatch />

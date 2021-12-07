@@ -12,3 +12,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.clothes {
+  display: flex;
+  justify-content: spave-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 20rem;
+
+}
+
+.card__top {
+  width: 100%;
+}
+
+.card__top img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__bottom {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.card__bottom .heart__icon {
+  font-size: 1.7rem;
+}
+
+.card__bottom__text h5 {
+  font-size: 1.1rem;
+}
+
+.card__bottom__text p {
+  margin-bottom: 0;
+}
