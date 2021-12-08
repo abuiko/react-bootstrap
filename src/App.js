@@ -16,9 +16,9 @@ function App() {
   return (
     <React.Fragment>
 
-      <Layout>
-        <NavigationBar />
 
+      <NavigationBar />
+      <Layout>
         <Switch>
           <Route exact path="/">
             <Home />

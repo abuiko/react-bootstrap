@@ -10,9 +10,6 @@ const Styles = styled.div`
     }
 
 `;
-
-
-
 export const Layout = (props) => {
     return (
         <Styles>
