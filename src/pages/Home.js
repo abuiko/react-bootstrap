@@ -6,6 +6,10 @@ import Dress from "../assets/images/dress-main.jpeg";
 import Jeans from "../assets/images/jeans.jpeg";
 import Top from "../assets/images/tops.jpeg";
 import Banner from '../assets/images/banner.jpg'
+import Recom1 from "../assets/images/recom1.png";
+import Recom2 from "../assets/images/recom2.png";
+import Recom3 from "../assets/images/recom3.png";
+import Recom4 from '../assets/images/recom4.png';
 
 
 const Styles = styled.div`
@@ -38,7 +42,7 @@ const Styles = styled.div`
     }
    .extra__banner {
         
-    margin: 0.2rem 0.2rem 1rem;
+        margin: 0.2rem 0.2rem 1rem;
         background-color: #28262B;
         padding: 1.5rem;
         color: #fff;
@@ -51,7 +55,9 @@ const Styles = styled.div`
         }
        
    }
-  
+   .clothes__cards {
+       margin-bottom: 3rem;
+   }
     .tops {  
         background: url(${Top}) no-repeat;        
     }
@@ -63,7 +69,7 @@ const Styles = styled.div`
     }
 
     .tops, .dresses, .jeans {
-        height: 700px;
+        height: 450px;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -76,12 +82,32 @@ const Styles = styled.div`
             background: rgba(255,255,255,0.6);
             padding: 2rem 3rem;
             width: 80%;
+            
         }
         h2 {
-            font-size: 3.3rem;
-            font-weight: bolder;
+            font-size: 3rem;
+            font-weight: bold;
         }
-    }   
+    } 
+    .recommended {
+        background: #fff;
+        padding: 4rem 2rem 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        h2 {
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        h2, div {
+            margin-bottom: 2rem;
+        }
+        &__img {
+            width: 300px;
+            margin: 0.4rem;
+        }
+
+        
+    }  
 
     @media only screen and (max-width: 500px) {
         .tops, .dresses, .jeans {
@@ -117,33 +143,44 @@ export const Home = () => {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row className="clothes__cards">
 
                     <Col sm className="dresses">
                         <div>
                             <h2>Dresses</h2>
                             <p>Evening, Casual, Coctail.</p>
-                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">See More</Button></Link>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="md">See More</Button></Link>
                         </div>
                     </Col>
                     <Col sm className="tops">
                         <div>
                             <h2>Tops</h2>
-                            <p>Sweaters, Hoodies, Tees, Coats, Jackets.</p>
-                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">See More</Button></Link>
+                            <p>Sweaters, Hoodies, Jackets.</p>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="md">See More</Button></Link>
                         </div>
                     </Col>
                     <Col sm className="jeans">
                         <div>
                             <h2>Pants</h2>
                             <p>Jeans, Pant, Shorts, Skirts.</p>
-                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">See More</Button></Link>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="md">See More</Button></Link>
                         </div>
                     </Col>
 
                 </Row>
+                <Row>
+                    <Col className="recommended">
+                        <h2>Recommended for you</h2>
+                        <div>
+                            <img className="recommended__img" src={Recom1} alt="sweater" />
+                            <img className="recommended__img" src={Recom2} alt="dress" />
+                            <img className="recommended__img" src={Recom3} alt="pants" />
+                            <img className="recommended__img" src={Recom4} alt="sweatshirt" />
+                        </div>
+                    </Col>
+                </Row>
             </Container>
-            {/* <Footer /> */}
+
         </Styles>
 
     )
