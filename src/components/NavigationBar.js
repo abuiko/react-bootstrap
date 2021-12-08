@@ -18,6 +18,7 @@ const Styles = styled.div`
         background-color: #fff;
         padding: 1.6rem 2rem 1.6rem;  
         
+        
         &__logo {
             width: 2.6rem;   
                     
@@ -56,7 +57,7 @@ const Styles = styled.div`
 export const NavigationBar = () => {
     return (
         <Styles>
-            <Navbar expand="lg" className="navbar">
+            <Navbar expand="lg" className="navbar" fixed="top">
                 <div className="navbar__search">
                     <FontAwesomeIcon className="navbar__icon" icon={faSearch} />
                 </div>

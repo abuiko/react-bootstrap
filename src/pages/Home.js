@@ -1,37 +1,62 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-// import { Footer } from '../components/Footer'
 import { Row, Col, Button, Container } from "react-bootstrap";
 import styled from "styled-components";
 import Dress from "../assets/images/dress-main.jpeg";
 import Jeans from "../assets/images/jeans.jpeg";
 import Top from "../assets/images/tops.jpeg";
+import Banner from '../assets/images/banner.jpg'
 
 
 const Styles = styled.div`
-   .banner {
+    .img-container {
+        padding-top: 3rem;
+    }
+    .main__banner {
+        margin: 0.2rem 0.2rem 1rem;
+        background: url(${Banner}) no-repeat;
+        height: 450px;
+        position: relative;
         
-        margin: 0.2rem;
+        
+        div {
+            
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-5%, -50%);
+            background: #fff;
+            width: 500px;
+            padding: 3rem;
+
+            h2 {
+                font-weight: bolder;
+                margin-bottom: 2rem;
+                font-size: 2.7rem;
+            }
+        }
+    }
+   .extra__banner {
+        
+    margin: 0.2rem 0.2rem 1rem;
         background-color: #28262B;
         padding: 1.5rem;
         color: #fff;
         text-align: center;
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0rem;
+            letter-spacing: 0.1rem;
+        }
        
    }
-   .banner h2 {
-       font-size: 1.8rem;
-       margin-bottom: 0rem;
-       letter-spacing: 0.1rem;
-   }
   
-    .tops {
-        
-        background: url(${Top}) no-repeat;
-        
+    .tops {  
+        background: url(${Top}) no-repeat;        
     }
     .dresses {
-        background: url(${Dress}) no-repeat;
-        
+        background: url(${Dress}) no-repeat;        
     }
     .jeans {
         background: url(${Jeans}) no-repeat;     
@@ -46,30 +71,30 @@ const Styles = styled.div`
         align-items: center;
         text-align: center;
         margin: 0.2rem;
+        
+        div {
+            background: rgba(255,255,255,0.6);
+            padding: 2rem 3rem;
+            width: 80%;
+        }
+        h2 {
+            font-size: 3.3rem;
+            font-weight: bolder;
+        }
     }   
-
-    .tops div, .dresses div, .jeans div {
-        background: rgba(255,255,255,0.6);
-        padding: 2rem 3rem;
-        width: 80%;
-    }
-
-    .tops h2, .dresses h2, .jeans h2 {
-        font-size: 3.3rem;
-        font-weight: bolder;
-    }
 
     @media only screen and (max-width: 500px) {
         .tops, .dresses, .jeans {
             height: 450px;
+
+            h2 {
+                font-size: 1.7rem;
+            }
         }
-        .banner h2 {
+        .extra__banner h2 {
             font-size: 1rem;
         }
-        .tops h2, .dresses h2, .jeans h2 {
-            font-size: 1.7rem;
-            
-        }
+        
     }
 `;
 
@@ -78,11 +103,20 @@ export const Home = () => {
         <Styles>
             <Container fluid className="img-container">
                 <Row>
-
-                    <Col className="banner">
-                        <h2>Fall Sale: new price cuts added Up to 50% off can't-miss picks!</h2>
+                    <Col className="main__banner">
+                        <div>
+                            <h3>GET HOLIDAY READY</h3>
+                            <h2>UP TO 30% OFF</h2>
+                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">Shop now</Button></Link>
+                        </div>
                     </Col>
                 </Row>
+                <Row>
+                    <Col className="extra__banner">
+                        <h2>FREE EXPRESS SHIPPING FOR $75+ ORDERS</h2>
+                    </Col>
+                </Row>
+
                 <Row>
 
                     <Col sm className="dresses">
