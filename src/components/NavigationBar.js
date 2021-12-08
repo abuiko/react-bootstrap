@@ -42,8 +42,13 @@ const Styles = styled.div`
         }
     }
     .fa-icon {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color: #000;
+    }
+    @media only screen and (max-width: 500px) {
+        .fa-icon {
+            font-size: 1rem;
+        }
     }
     
 `;

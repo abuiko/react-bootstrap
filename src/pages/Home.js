@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-import { Footer } from '../components/Footer'
+// import { Footer } from '../components/Footer'
 import { Row, Col, Button, Container } from "react-bootstrap";
 import styled from "styled-components";
 import Dress from "../assets/images/dress-main.jpeg";
@@ -38,7 +38,7 @@ const Styles = styled.div`
     }
 
     .tops, .dresses, .jeans {
-        height: 600px;
+        height: 700px;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -47,6 +47,12 @@ const Styles = styled.div`
         text-align: center;
         margin: 0.2rem;
     }   
+
+    .tops div, .dresses div, .jeans div {
+        background: rgba(255,255,255,0.6);
+        padding: 2rem 3rem;
+        width: 80%;
+    }
 
     .tops h2, .dresses h2, .jeans h2 {
         font-size: 3.3rem;

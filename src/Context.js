@@ -13,7 +13,7 @@ function ContextProvider(props) {
             .then(data => setAllClothes(data))
     }, [])
 
-    console.log(allClothes)
+
     return (
         <Context.Provider value={{ allClothes }}>
             {props.children}
