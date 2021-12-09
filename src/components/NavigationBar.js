@@ -19,10 +19,13 @@ const Styles = styled.div`
         padding: 1.6rem 2rem 1.6rem;  
         
         
+        
         &__logo {
             width: 2.6rem;   
                     
         }
+
+        
         &__link {
             display: flex;
             flex-direction: column;
@@ -45,7 +48,8 @@ const Styles = styled.div`
             color: #000;
         }
     }
-    
+   
+        
     @media only screen and (max-width: 500px) {
         .fa-icon {
             font-size: 1rem;
@@ -61,14 +65,18 @@ export const NavigationBar = () => {
                 <div className="navbar__search">
                     <FontAwesomeIcon className="navbar__icon" icon={faSearch} />
                 </div>
+
                 <Link to="/">
                     <Navbar.Brand className="navbar__brand">
                         <Image src={Logo} className="navbar__logo" />
                     </Navbar.Brand>
                 </Link>
+
+
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                    <Nav>
                         <Nav.Item>
 
                             <Nav.Link className="navbar__link">
@@ -100,6 +108,8 @@ export const NavigationBar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+
+
         </Styles>
     )
 }

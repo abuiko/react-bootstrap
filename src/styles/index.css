@@ -16,45 +16,14 @@ code {
 }
 
 .clothes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 330px);
+  grid-gap: 0.5rem;
+  justify-content: center;
+  margin-top: 5rem;
+
 }
 
 .card {
-  width: 15rem;
-  margin: 1rem;
-
-}
-
-.card__top {
-  width: 100%;
-}
-
-.card__top img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.card__bottom {
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.card__bottom .heart__icon {
-  font-size: 1.7rem;
-}
-
-.card__bottom__text h5 {
-  font-size: 1.1rem;
-  text-transform: capitalize;
-}
-
-.card__bottom__text p {
-  margin-bottom: 0;
+  background-color: #F1F2F6;
 }

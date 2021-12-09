@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import ClothesItem from '../components/ClothesItem'
-import { Context } from "../Context"
+import { Context } from "../Context";
+
+
 
 function Clothes() {
     const { allClothes } = useContext(Context)
@@ -9,9 +11,12 @@ function Clothes() {
         <ClothesItem key={item.id} item={item} />
     ))
     return (
+
         <div className="clothes">
             {clothesCards}
         </div>
+
+
     )
 }
 
