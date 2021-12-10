@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import styled from "styled-components";
+import { Context } from "../Context"
 
 const Styles = styled.div`
     
@@ -21,6 +23,7 @@ const Styles = styled.div`
                 right: 5%;
                 transform: translate(-5%, -5%);
                 font-size: 1.8rem;
+                cursor: pointer;
             }
         }
         &__bottom {
@@ -39,12 +42,18 @@ const Styles = styled.div`
 `;
 
 function ClothesItem({ item }) {
+    const { toggleFavorite } = useContext(Context)
     return (
         <Styles>
             <div className="card">
                 <div className="card__top">
                     <img src={item.url} alt="jeans" />
-                    <FontAwesomeIcon className="heart__icon" icon={farHeart} />
+                    {
+                        item.isFavorite ?
+                            <FontAwesomeIcon className="heart__icon" onClick={() => toggleFavorite(item.id)} icon={faHeart} /> :
+                            <FontAwesomeIcon className="heart__icon" onClick={() => toggleFavorite(item.id)} icon={farHeart} />
+                    }
+
                 </div>
                 <div className="card__bottom">
                     <div className="card__bottom__text">

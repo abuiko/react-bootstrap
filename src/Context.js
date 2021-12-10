@@ -13,9 +13,21 @@ function ContextProvider(props) {
             .then(data => setAllClothes(data))
     }, [])
 
+    function toggleFavorite(id) {
+        const updatedArr = allClothes.map(item => {
 
+            if (item.id === id) {
+                return {
+                    ...item,
+                    isFavorite: !item.isFavorite
+                }
+            }
+            return item
+        })
+        setAllClothes(updatedArr)
+    }
     return (
-        <Context.Provider value={{ allClothes }}>
+        <Context.Provider value={{ allClothes, toggleFavorite }}>
             {props.children}
         </Context.Provider>
     )
