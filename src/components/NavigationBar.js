@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import { Nav, Navbar, Image, Form, FormControl } from "react-bootstrap";
+import { Nav, Navbar, Image, Container, Form, FormControl, InputGroup } from "react-bootstrap";
 import styled from "styled-components";
 import Logo from '../assets/icons/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,21 +11,32 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 const Styles = styled.div`
+
     .ml-auto {
         margin-left: auto;       
     }
+    .container {
+        padding: 0;
+    }
     .navbar {
         background-color: #fff;
-        padding: 1.6rem 2rem 1.6rem;  
-        
-        
-        
+        padding: 1.6rem 2rem 1.6rem;
+      
+        &__search__icon {
+            background: transparent;
+            border: none;
+        }
+        &__input {
+            border: none;
+        }
         &__logo {
             width: 2.6rem;   
                     
         }
 
-        
+        &__brand {
+            margin: 0;
+        }
         &__link {
             display: flex;
             flex-direction: column;
@@ -62,54 +73,67 @@ export const NavigationBar = () => {
     return (
         <Styles>
             <Navbar expand="lg" className="navbar" fixed="top">
-                <div className="navbar__search">
-                    <FontAwesomeIcon className="navbar__icon" icon={faSearch} />
+                <div className="container">
+
+
+                    <Form className="navbar__search">
+                        <InputGroup>
+                            <InputGroup.Text className="navbar__search__icon"><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
+                            <FormControl className="navbar__input" placeholder="Search products" />
+                        </InputGroup>
+                    </Form>
                 </div>
+                <div className="text-center">
 
-                <Link to="/">
-                    <Navbar.Brand className="navbar__brand">
-                        <Image src={Logo} className="navbar__logo" />
-                    </Navbar.Brand>
-                </Link>
+                    <Link to="/">
+                        <Navbar.Brand className="navbar__brand">
+                            <Image src={Logo} className="navbar__logo" />
+                        </Navbar.Brand>
+                    </Link>
 
+                </div>
+                <Container fluid className="p-0">
 
-
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                    <Nav>
-                        <Nav.Item>
-
-                            <Nav.Link className="navbar__link">
-                                <Link to="/user">
-                                    <FontAwesomeIcon className="navbar__icon" icon={faUserAlt} />
-                                </Link>
-                            </Nav.Link>
-
-                        </Nav.Item>
-                        <Nav.Item>
-
-                            <Nav.Link className="navbar__link">
-                                <Link to="/favorites">
-                                    <FontAwesomeIcon className="navbar__icon" icon={faHeart} />
-                                </Link>
-                            </Nav.Link>
-
-                        </Nav.Item>
-                        <Nav.Item>
-
-                            <Nav.Link className="navbar__link">
-                                <Link to="/basket">
-                                    <FontAwesomeIcon className="navbar__icon" icon={faShoppingCart} />
-                                </Link>
-                            </Nav.Link>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
 
 
-                        </Nav.Item>
-                    </Nav>
-                </Navbar.Collapse>
+                        <Nav className="ml-auto p-0">
+                            <Nav.Item>
+
+                                <Nav.Link className="navbar__link">
+                                    <Link to="/user">
+                                        <FontAwesomeIcon className="navbar__icon" icon={faUserAlt} />
+                                    </Link>
+                                </Nav.Link>
+
+                            </Nav.Item>
+                            <Nav.Item>
+
+                                <Nav.Link className="navbar__link">
+                                    <Link to="/favorites">
+                                        <FontAwesomeIcon className="navbar__icon" icon={faHeart} />
+                                    </Link>
+                                </Nav.Link>
+
+                            </Nav.Item>
+                            <Nav.Item>
+
+                                <Nav.Link className="navbar__link">
+                                    <Link to="/basket">
+                                        <FontAwesomeIcon className="navbar__icon" icon={faShoppingCart} />
+                                    </Link>
+                                </Nav.Link>
+
+
+                            </Nav.Item>
+
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
             </Navbar>
 
 
-        </Styles>
+        </Styles >
     )
 }
