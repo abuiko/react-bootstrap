@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
@@ -43,16 +43,23 @@ const Styles = styled.div`
 
 function ClothesItem({ item }) {
     const { toggleFavorite } = useContext(Context)
+    const [hovered, setHovered] = useState(false)
+
+    function heartIcon() {
+        if (item.isFavorite) {
+            return <FontAwesomeIcon className="heart__icon" onClick={() => toggleFavorite(item.id)} icon={faHeart} />
+        } else if (hovered) {
+            return <FontAwesomeIcon className="heart__icon" onClick={() => toggleFavorite(item.id)} icon={farHeart} />
+        }
+    }
+
+
     return (
         <Styles>
-            <div className="card">
+            <div className="card" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
                 <div className="card__top">
                     <img src={item.url} alt="jeans" />
-                    {
-                        item.isFavorite ?
-                            <FontAwesomeIcon className="heart__icon" onClick={() => toggleFavorite(item.id)} icon={faHeart} /> :
-                            <FontAwesomeIcon className="heart__icon" onClick={() => toggleFavorite(item.id)} icon={farHeart} />
-                    }
+                    {heartIcon()}
 
                 </div>
                 <div className="card__bottom">
