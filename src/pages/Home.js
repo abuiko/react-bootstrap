@@ -6,12 +6,8 @@ import Dress from "../assets/images/dress-main.jpeg";
 import Jeans from "../assets/images/jeans.jpeg";
 import Top from "../assets/images/tops.jpeg";
 import Banner from '../assets/images/banner.jpg'
-import Recom1 from "../assets/images/recom1.png";
-import Recom2 from "../assets/images/recom2.png";
-import Recom3 from "../assets/images/recom3.png";
-import Recom4 from '../assets/images/recom4.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import Recommended from '../components/Recommended'
+
 
 
 const Styles = styled.div`
@@ -195,29 +191,7 @@ export const Home = () => {
 
                 </Row>
                 <Row>
-                    <Col className="recommended">
-                        <h2>Recommended for you</h2>
-                        <div className="recommended__group">
-
-                            <div className="img__wrapper">
-                                <img className="recommended__img" src={Recom1} alt="sweater" />
-                                <FontAwesomeIcon className="heart__icon" icon={faHeart} />
-                            </div>
-                            <div className="img__wrapper">
-                                <img className="recommended__img" src={Recom2} alt="dress" />
-                                <FontAwesomeIcon className="heart__icon" icon={faHeart} />
-                            </div>
-                            <div className="img__wrapper">
-                                <img className="recommended__img" src={Recom3} alt="pants" />
-                                <FontAwesomeIcon className="heart__icon" icon={faHeart} />
-                            </div>
-                            <div className="img__wrapper">
-                                <img className="recommended__img" src={Recom4} alt="sweatshirt" />
-                                <FontAwesomeIcon className="heart__icon" icon={faHeart} />
-                            </div>
-
-                        </div>
-                    </Col>
+                    <Recommended />
                 </Row>
             </Container>
 
