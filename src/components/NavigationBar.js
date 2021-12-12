@@ -101,28 +101,28 @@ export const NavigationBar = () => {
                         <Nav className="ml-auto p-0">
                             <Nav.Item>
 
-                                <Nav.Link className="navbar__link">
-                                    <Link to="/user">
-                                        <FontAwesomeIcon className="navbar__icon" icon={faUserAlt} />
-                                    </Link>
+                                <Nav.Link as={Link} to="/user" className="navbar__link">
+
+                                    <FontAwesomeIcon className="navbar__icon" icon={faUserAlt} />
+
                                 </Nav.Link>
 
                             </Nav.Item>
                             <Nav.Item>
 
-                                <Nav.Link className="navbar__link">
-                                    <Link to="/favorites">
-                                        <FontAwesomeIcon className="navbar__icon" icon={faHeart} />
-                                    </Link>
+                                <Nav.Link as={Link} to="/favorites" className="navbar__link">
+
+                                    <FontAwesomeIcon className="navbar__icon" icon={faHeart} />
+
                                 </Nav.Link>
 
                             </Nav.Item>
                             <Nav.Item>
 
-                                <Nav.Link className="navbar__link">
-                                    <Link to="/basket">
-                                        <FontAwesomeIcon className="navbar__icon" icon={faShoppingCart} />
-                                    </Link>
+                                <Nav.Link as={Link} to="/basket" className="navbar__link">
+
+                                    <FontAwesomeIcon className="navbar__icon" icon={faShoppingCart} />
+
                                 </Nav.Link>
 
 

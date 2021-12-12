@@ -87,47 +87,6 @@ const Styles = styled.div`
             font-weight: bold;
         }
     } 
-    .recommended {
-        background: #fff;
-        padding: 4rem 2rem 3rem;
-        margin-bottom: 3rem;
-        text-align: center;
-        
-        h2 {
-            text-transform: uppercase;
-            font-weight: normal;
-            margin-bottom: 2rem;
-        }
-       
-        &__group {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 2rem;
-        }
-
-        .img__wrapper {
-            position: relative;
-            width: 300px;
-            margin: 0.4rem;
-
-            img {
-                object-fit: cover;
-                width: 100%;
-            }
-            .heart__icon {
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                font-size: 1.8rem;
-                color: #28262B;
-                cursor: pointer;
-
-                &:hover {
-                    color: #BE1212;
-                }
-            }
-        }
-
         
     }  
 

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react';
 import { Col } from "react-bootstrap";
+import { Context } from "../Context"
 
 import Recom1 from "../assets/images/recom1.png";
 import Recom2 from "../assets/images/recom2.png";
@@ -8,7 +9,7 @@ import Recom4 from '../assets/images/recom4.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+// import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 
 import styled from "styled-components";
 
@@ -63,6 +64,20 @@ const Styles = styled.div`
 
 
 function Recommended() {
+    // const [recommended, setRecommended] = useState([])
+    // const { allClothes } = useContext(Context)
+
+
+    // useEffect(() => {
+    //     for (let i = 0; i < 4; i++) {
+
+    //         setRecommended(arr => [...arr, allClothes[Math.floor(Math.random() * allClothes.length)]])
+    //     }
+    //     return recommended
+
+    // }, [])
+    // console.log(recommended)
+
     return (
         <Styles>
             <Col className="recommended">
@@ -70,6 +85,7 @@ function Recommended() {
                 <div className="recommended__group">
 
                     <div className="img__wrapper">
+
                         <img className="recommended__img" src={Recom1} alt="sweater" />
                         <FontAwesomeIcon className="heart__icon" icon={faHeart} />
                     </div>
