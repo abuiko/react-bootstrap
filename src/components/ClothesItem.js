@@ -1,7 +1,10 @@
 import React, { useState, useContext } from 'react'
+import PropTypes from "prop-types"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import { faPlusSquare as farPlusSquare } from '@fortawesome/free-regular-svg-icons'
 import styled from "styled-components";
 import { Context } from "../Context"
 
@@ -20,8 +23,16 @@ const Styles = styled.div`
             .heart__icon {
                 position: absolute;
                 top: 5%;
-                right: 5%;
-                transform: translate(-5%, -5%);
+                right: 9%;
+                transform: translate(-9%, -5%);
+                font-size: 1.8rem;
+                cursor: pointer;
+            }
+            .cart__icon {
+                position: absolute;
+                bottom: 5%;
+                right: 9%;
+                transform: translate(-9%, -5%);
                 font-size: 1.8rem;
                 cursor: pointer;
             }
@@ -42,7 +53,7 @@ const Styles = styled.div`
 `;
 
 function ClothesItem({ item }) {
-    const { toggleFavorite } = useContext(Context)
+    const { toggleFavorite, addToCart } = useContext(Context)
     const [hovered, setHovered] = useState(false)
 
     function heartIcon() {
@@ -60,6 +71,7 @@ function ClothesItem({ item }) {
                 <div className="card__top">
                     <img src={item.url} alt="jeans" />
                     {heartIcon()}
+                    {hovered ? <FontAwesomeIcon className="cart__icon" onClick={() => addToCart(item)} icon={farPlusSquare}></FontAwesomeIcon> : ""}
 
                 </div>
                 <div className="card__bottom">
@@ -68,12 +80,24 @@ function ClothesItem({ item }) {
                         <p>{item.price}</p>
                     </div>
 
+
                 </div>
 
             </div>
-        </Styles>
+        </Styles >
 
     )
 }
+
+
+Image.propTypes = {
+    className: PropTypes.string,
+    img: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        isFavorite: PropTypes.bool
+    })
+}
+
 
 export default ClothesItem
