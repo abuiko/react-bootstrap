@@ -59,7 +59,14 @@ const Styles = styled.div`
             color: #000;
         }
     }
-   
+    @media only screen and (max-width: 920px) {
+        .navbar__search {
+            display: none;
+        }
+        
+        
+        
+    }
         
     @media only screen and (max-width: 500px) {
         .fa-icon {
