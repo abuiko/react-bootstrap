@@ -53,7 +53,7 @@ const Styles = styled.div`
 `;
 
 function ClothesItem({ item }) {
-    const { toggleFavorite, addToCart, cartItems } = useContext(Context)
+    const { toggleFavorite, addToCart, removeFromCart, cartItems } = useContext(Context)
     const [hovered, setHovered] = useState(false)
 
     function heartIcon() {
@@ -67,7 +67,7 @@ function ClothesItem({ item }) {
     function cartIcon() {
         const alreadyInCart = cartItems.find(cartItem => cartItem.id === item.id)
         if (alreadyInCart) {
-            return <FontAwesomeIcon className="cart__icon" onClick={() => addToCart(item)} icon={faPlusSquare}></FontAwesomeIcon>
+            return <FontAwesomeIcon className="cart__icon" onClick={() => removeFromCart(item.id)} icon={faPlusSquare}></FontAwesomeIcon>
         } else if (hovered) {
             return <FontAwesomeIcon className="cart__icon" onClick={() => addToCart(item)} icon={farPlusSquare}></FontAwesomeIcon>
         }
