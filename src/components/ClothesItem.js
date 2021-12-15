@@ -53,7 +53,7 @@ const Styles = styled.div`
 `;
 
 function ClothesItem({ item }) {
-    const { toggleFavorite, addToCart } = useContext(Context)
+    const { toggleFavorite, addToCart, cartItems } = useContext(Context)
     const [hovered, setHovered] = useState(false)
 
     function heartIcon() {
@@ -64,6 +64,15 @@ function ClothesItem({ item }) {
         }
     }
 
+    function cartIcon() {
+        const alreadyInCart = cartItems.find(cartItem => cartItem.id === item.id)
+        if (alreadyInCart) {
+            return <FontAwesomeIcon className="cart__icon" onClick={() => addToCart(item)} icon={faPlusSquare}></FontAwesomeIcon>
+        } else if (hovered) {
+            return <FontAwesomeIcon className="cart__icon" onClick={() => addToCart(item)} icon={farPlusSquare}></FontAwesomeIcon>
+        }
+    }
+
 
     return (
         <Styles>
@@ -71,7 +80,7 @@ function ClothesItem({ item }) {
                 <div className="card__top">
                     <img src={item.url} alt="jeans" />
                     {heartIcon()}
-                    {hovered ? <FontAwesomeIcon className="cart__icon" onClick={() => addToCart(item)} icon={farPlusSquare}></FontAwesomeIcon> : ""}
+                    {cartIcon()}
 
                 </div>
                 <div className="card__bottom">

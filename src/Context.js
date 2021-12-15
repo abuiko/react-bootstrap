@@ -6,6 +6,7 @@ function ContextProvider(props) {
     const [allClothes, setAllClothes] = useState([])
     const [cartItems, setCartItems] = useState([])
 
+
     const url = "https://raw.githubusercontent.com/abuiko/react-bootstrap-assets/master/images.json"
 
 
@@ -34,8 +35,9 @@ function ContextProvider(props) {
     }
 
 
+
     return (
-        <Context.Provider value={{ allClothes, toggleFavorite, addToCart }}>
+        <Context.Provider value={{ allClothes, toggleFavorite, addToCart, cartItems }}>
             {props.children}
         </Context.Provider>
     )
