@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from "../Context"
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +30,7 @@ const Styles = styled.div`
 `;
 
 function CartItem({ item }) {
+    const { removeFromCart } = useContext(Context)
     return (
         <Styles>
             <div className="cart__item">
@@ -37,7 +39,7 @@ function CartItem({ item }) {
                     <h5>{item.name}</h5>
                     <p>{item.price}</p>
                 </div>
-                <FontAwesomeIcon className="trash__icon" icon={faTimes} />
+                <FontAwesomeIcon className="trash__icon" onClick={() => removeFromCart(item.id)} icon={faTimes} />
             </div>
         </Styles>
 
