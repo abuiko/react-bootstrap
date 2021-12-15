@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from "../Context"
 import { Container, Col, Row, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom"
 import styled from "styled-components";
@@ -6,6 +7,7 @@ import Amex from "../assets/icons/amex.png";
 import American from "../assets/icons/american-express.png";
 import Paypal from "../assets/icons/paypal.png";
 import Visa from "../assets/icons/visa.png";
+import CartItem from "../components/CartItem"
 
 const Styles = styled.div`
 
@@ -44,19 +46,29 @@ const Styles = styled.div`
 
 
 export const Basket = () => {
+    const { cartItems } = useContext(Context)
+    const cartElements = cartItems.map(item => <CartItem key={item.id} item={item} />)
     return (
 
         <Styles>
             <div className="cart">
                 <Container className="p-4">
                     <Row>
-                        <Col md="6" sm="12">
-                            <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
-                            <p>Sign in/Become a member to save or access saved items in your shopping bag.</p>
+                        {cartItems.length > 0 ?
+                            <Col md="8" sm="12">
+                                {cartElements}
+                            </Col> :
+                            <Col md="6" sm="12">
 
-                            <Link to="/user"><Button type="button" variant="outline-dark" size="lg">Sign in/Become a member</Button></Link>
-                        </Col>
-                        <Col md="6" sm="12" className="gray-bg">
+
+                                <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
+                                <p>Sign in/Become a member to save or access saved items in your shopping bag.</p>
+
+                                <Link to="/user"><Button type="button" variant="outline-dark" size="lg">Sign in/Become a member</Button></Link>
+                            </Col>
+                        }
+
+                        <Col md="4" sm="12" className="gray-bg">
 
                             <hr />
                             <div className="total-area">

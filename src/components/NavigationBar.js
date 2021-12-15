@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from 'react-router-dom'
+import { Context } from "../Context"
 import { Nav, Navbar, Image, Container, Form, FormControl, InputGroup } from "react-bootstrap";
 import styled from "styled-components";
 import Logo from '../assets/icons/logo.png';
@@ -59,6 +60,16 @@ const Styles = styled.div`
             color: #000;
         }
     }
+
+    .cart_link {
+        position: relative;
+    }
+    .in__cart {
+        position: absolute;
+        bottom: -12%;
+        right: 2%;
+        font-weight: bold;
+        }
     @media only screen and (max-width: 920px) {
         .navbar__search {
             display: none;
@@ -77,12 +88,11 @@ const Styles = styled.div`
 `;
 
 export const NavigationBar = () => {
+    const { cartItems } = useContext(Context)
     return (
         <Styles>
             <Navbar expand="lg" className="navbar" fixed="top">
                 <div className="container">
-
-
                     <Form className="navbar__search">
                         <InputGroup>
                             <InputGroup.Text className="navbar__search__icon"><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
@@ -91,56 +101,36 @@ export const NavigationBar = () => {
                     </Form>
                 </div>
                 <div className="text-center">
-
                     <Link to="/">
                         <Navbar.Brand className="navbar__brand">
                             <Image src={Logo} className="navbar__logo" />
                         </Navbar.Brand>
                     </Link>
-
                 </div>
                 <Container fluid className="p-0">
-
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-
-
                         <Nav className="ml-auto p-0">
                             <Nav.Item>
-
                                 <Nav.Link as={Link} to="/user" className="navbar__link">
-
                                     <FontAwesomeIcon className="navbar__icon" icon={faUserAlt} />
-
                                 </Nav.Link>
-
                             </Nav.Item>
                             <Nav.Item>
-
                                 <Nav.Link as={Link} to="/favorites" className="navbar__link">
-
                                     <FontAwesomeIcon className="navbar__icon" icon={faHeart} />
-
                                 </Nav.Link>
-
                             </Nav.Item>
                             <Nav.Item>
-
-                                <Nav.Link as={Link} to="/basket" className="navbar__link">
-
+                                <Nav.Link as={Link} to="/basket" className="navbar__link cart_link">
                                     <FontAwesomeIcon className="navbar__icon" icon={faShoppingCart} />
-
+                                    <span className="in__cart">{cartItems.length > 0 ? cartItems.length : 0}</span>
                                 </Nav.Link>
-
-
                             </Nav.Item>
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
-
         </Styles >
     )
 }
