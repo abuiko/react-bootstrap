@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Context } from "../Context"
 import { Container, Col, Row, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom"
@@ -46,8 +46,23 @@ const Styles = styled.div`
 
 
 export const Basket = () => {
-    const { cartItems } = useContext(Context)
+    const [buttonText, setButtonText] = useState("Place Order")
+    const { cartItems, emptyCart } = useContext(Context)
+
     const cartElements = cartItems.map(item => <CartItem key={item.id} item={item} />)
+
+    const prices = cartItems.map(item => item.price)
+    const totalPrice = prices.reduce((a, b) => a + b, 0).toFixed(2)
+
+    function placeOrder() {
+        setButtonText("Ordering...")
+        setTimeout(() => {
+            console.log("Order Placed!")
+            setButtonText("Place Order")
+            emptyCart()
+        }, 3000)
+    }
+
     return (
 
         <Styles>
@@ -69,13 +84,20 @@ export const Basket = () => {
                         }
 
                         <Col md="4" sm="12" className="gray-bg">
-
+                            <div className="total-area">
+                                <p>Order Value</p>
+                                <p>${totalPrice}</p>
+                            </div>
+                            <div className="total-area">
+                                <p>Shipping Cost</p>
+                                <p>$0</p>
+                            </div>
                             <hr />
                             <div className="total-area">
                                 <h4>Total</h4>
-                                <h4 id="total">0.00$</h4>
+                                <h4 id="total">${totalPrice}</h4>
                             </div>
-                            <Button type="button" variant="secondary" size="lg">Continue to Checkout</Button>
+                            <Button onClick={placeOrder} type="button" variant="secondary" size="lg">{buttonText}</Button>
                             <div className="banks">
                                 <p>We accept</p>
                                 <div className="bank-logos">

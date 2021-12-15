@@ -37,10 +37,22 @@ function ContextProvider(props) {
         setCartItems(prevItems => prevItems.filter(item => item.id !== id))
     }
 
+    function emptyCart() {
+        setCartItems([])
+    }
 
 
     return (
-        <Context.Provider value={{ allClothes, toggleFavorite, addToCart, removeFromCart, cartItems }}>
+        <Context.Provider
+            value={{
+                allClothes,
+                toggleFavorite,
+                addToCart,
+                removeFromCart,
+                emptyCart,
+                cartItems
+            }
+            }>
             {props.children}
         </Context.Provider>
     )
