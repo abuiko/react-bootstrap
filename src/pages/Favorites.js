@@ -5,7 +5,9 @@ import styled from "styled-components";
 import ClothesItem from '../components/ClothesItem';
 
 const Styles = styled.div`
-
+.container {
+margin-top: 5rem;
+}
 .favorites {
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);
@@ -24,7 +26,7 @@ export const Favorites = () => {
     const favorite = favClothes.map(item => <ClothesItem key={item.id} item={item} />)
     return (
         <Styles>
-            <div>
+            <div className="container">
                 <h1 className="text-center mb-3">My Favorites</h1>
 
                 {favorite.length > 0 ?
