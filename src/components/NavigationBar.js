@@ -12,6 +12,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 const Styles = styled.div`
+.sticky-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+  }
 
     .ml-auto {
         margin-left: auto;       
@@ -91,7 +97,7 @@ export const NavigationBar = () => {
     const { cartItems } = useContext(Context)
     return (
         <Styles>
-            <Navbar expand="lg" className="navbar" fixed="top">
+            <Navbar expand="lg" className="navbar sticky-nav">
                 <div className="container">
                     <Form className="navbar__search">
                         <InputGroup>

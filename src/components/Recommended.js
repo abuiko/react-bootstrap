@@ -1,6 +1,6 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { Col } from "react-bootstrap";
-import { Context } from "../Context"
+import { Context } from "../Context";
 
 import Recom1 from "../assets/images/recom1.png";
 import Recom2 from "../assets/images/recom2.png";
@@ -64,19 +64,10 @@ const Styles = styled.div`
 
 
 function Recommended() {
-    // const [recommended, setRecommended] = useState([])
-    // const { allClothes } = useContext(Context)
+    const [randomArr, setRandomArr] = useState([])
+    const { allClothes } = useContext(Context)
 
 
-    // useEffect(() => {
-    //     for (let i = 0; i < 4; i++) {
-
-    //         setRecommended(arr => [...arr, allClothes[Math.floor(Math.random() * allClothes.length)]])
-    //     }
-    //     return recommended
-
-    // }, [])
-    // console.log(recommended)
 
     return (
         <Styles>

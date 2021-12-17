@@ -1,34 +1,45 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from "../Context";
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
+import ClothesItem from '../components/ClothesItem';
 
 const Styles = styled.div`
-    .favorites {
-        display: flex;
-        align-items: center;
-        min-height: 40vh;
-        justify-content: center;
-        text-align: center;
-        background: #f5f5f5;
-    }
-    .mb {
-        margin-bottom: 1.5rem;
-    }
+
+.favorites {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-gap: 0.5rem;
+    justify-content: center;
+    margin-top: 3rem; 
+  
+  }
+ 
+    
 `;
 
 export const Favorites = () => {
+    const { allClothes } = useContext(Context)
+    const favClothes = allClothes.filter(clothes => clothes.isFavorite === true)
+    const favorite = favClothes.map(item => <ClothesItem key={item.id} item={item} />)
     return (
         <Styles>
-            <div className="favorites">
-                <div>
-                    <h1 className="mb">My Favorites</h1>
+            <div>
+                <h1 className="text-center mb-3">My Favorites</h1>
 
-                    <p className="mb">Want to save the items you love? Just click on the heart icon found on the product image and it will show up here.</p>
-                    <Button variant="outline-dark" size="lg" type="button">Browse Now</Button>
+                {favorite.length > 0 ?
+                    <div className="favorites">{favorite}</div> :
+                    <div className="text-center">
 
+                        <p className="mb">Want to save the items you love? Just click on the heart icon found on the product
+                        image and it will show up here.</p>
+                        <Button variant="outline-dark" size="lg" type="button">Browse Now</Button>
+                    </div>
 
-                </div>
+                }
             </div>
+
+
         </Styles>
 
     )
