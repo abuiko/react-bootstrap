@@ -1,16 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Col } from "react-bootstrap";
-import { Context } from "../Context";
+import { Row } from "react-bootstrap";
+import { Context } from "../Context"
 
 import Recom1 from "../assets/images/recom1.png";
 import Recom2 from "../assets/images/recom2.png";
 import Recom3 from "../assets/images/recom3.png";
 import Recom4 from '../assets/images/recom4.png';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-// import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -64,37 +59,38 @@ const Styles = styled.div`
 
 
 function Recommended() {
-    const [randomArr, setRandomArr] = useState([])
     const { allClothes } = useContext(Context)
+    const [recommended, setRecommended] = useState([])
 
 
 
     return (
         <Styles>
-            <Col className="recommended">
+            <Row className="recommended">
                 <h2>Recommended for you</h2>
+                {/* <button>Click</button> */}
                 <div className="recommended__group">
 
                     <div className="img__wrapper">
 
                         <img className="recommended__img" src={Recom1} alt="sweater" />
-                        <FontAwesomeIcon className="heart__icon" icon={faHeart} />
+
                     </div>
                     <div className="img__wrapper">
                         <img className="recommended__img" src={Recom2} alt="dress" />
-                        <FontAwesomeIcon className="heart__icon" icon={faHeart} />
+
                     </div>
                     <div className="img__wrapper">
                         <img className="recommended__img" src={Recom3} alt="pants" />
-                        <FontAwesomeIcon className="heart__icon" icon={faHeart} />
+
                     </div>
                     <div className="img__wrapper">
                         <img className="recommended__img" src={Recom4} alt="sweatshirt" />
-                        <FontAwesomeIcon className="heart__icon" icon={faHeart} />
+
                     </div>
 
                 </div>
-            </Col>
+            </Row>
         </Styles>
 
     )

@@ -73,7 +73,7 @@ export const Basket = () => {
                             <Col md="8" sm="12">
                                 {cartElements}
                             </Col> :
-                            <Col md="6" sm="12">
+                            <Col md="8" sm="12">
 
 
                                 <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
@@ -114,6 +114,7 @@ export const Basket = () => {
                     </Row>
 
                 </Container>
+
             </div>
 
         </Styles>

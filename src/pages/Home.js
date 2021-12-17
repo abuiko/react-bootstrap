@@ -152,6 +152,8 @@ export const Home = () => {
                 <Row>
                     <Recommended />
                 </Row>
+                <hr />
+
             </Container>
 
         </Styles>

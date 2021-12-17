@@ -5,17 +5,17 @@ import styled from "styled-components";
 import ClothesItem from '../components/ClothesItem';
 
 const Styles = styled.div`
-.container {
-margin-top: 5rem;
-}
-.favorites {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 350px);
-    grid-gap: 0.5rem;
-    justify-content: center;
-    margin-top: 3rem; 
-  
-  }
+    .container {
+        margin-top: 5rem;
+    }
+    .favorites {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        grid-gap: 0.5rem;
+        justify-content: center;
+        margin-top: 3rem; 
+    
+    }
  
     
 `;
@@ -40,9 +40,6 @@ export const Favorites = () => {
 
                 }
             </div>
-
-
         </Styles>
-
     )
 }

@@ -8,6 +8,7 @@ import { Basket } from "./pages/Basket";
 import { NoMatch } from "./pages/NoMatch";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
+import Footer from "./components/Footer"
 
 
 
@@ -41,6 +42,7 @@ function App() {
         </Switch>
 
       </Layout>
+      <Footer />
 
     </React.Fragment>
   );
