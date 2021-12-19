@@ -119,6 +119,14 @@ const Styles = styled.div`
             
             }
         }
+        .tops, .dresses, .jeans {
+            height: 400px;
+            margin: 0rem 0rem 0.1rem;
+
+            div {
+                width: 90%;
+            }
+        }
         
         
     }
@@ -171,7 +179,7 @@ export const Home = () => {
                 <Row>
                     <Recommended />
                 </Row>
-                <hr />
+
 
             </Container>
 

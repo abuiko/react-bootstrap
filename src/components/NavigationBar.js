@@ -77,6 +77,7 @@ const Styles = styled.div`
         right: 2%;
         font-weight: bold;
         }
+        
     @media only screen and (max-width: 920px) {
         .navbar__search {
             display: none;
@@ -85,11 +86,17 @@ const Styles = styled.div`
         
         
     }
+    @media only screen and (max-width: 800px) {
+        .navbar__brand {
+            display: none;
+        }
+    }
         
     @media only screen and (max-width: 500px) {
         .fa-icon {
             font-size: 1rem;
         }
+        
     }
     
 `;
