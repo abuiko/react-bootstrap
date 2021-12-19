@@ -28,7 +28,7 @@ const Styles = styled.div`
             left: 10%;
             transform: translate(-5%, -50%);
             background: #fff;
-            width: 500px;
+            max-width: 500px;
             padding: 3rem;
 
             h2 {
@@ -98,9 +98,28 @@ const Styles = styled.div`
                 font-size: 1.7rem;
             }
         }
-        .extra__banner h2 {
-            font-size: 1rem;
+        .main__banner {
+            margin-bottom: 0rem;
         }
+        .main__banner div {
+            h3 {
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            
+            
+        }
+        
+        .extra__banner {
+            margin-bottom: 0.2rem;
+            h2 {
+            font-size: 0.8rem;
+            
+            }
+        }
+        
         
     }
 `;
@@ -114,7 +133,7 @@ export const Home = () => {
                         <div>
                             <h3>GET HOLIDAY READY</h3>
                             <h2>UP TO 30% OFF</h2>
-                            <Link to="/clothes"><Button type="button" variant="dark" size="lg">Shop now</Button></Link>
+                            <Link to="/clothes"><Button ckassName="banner__btn" type="button" variant="dark" size="lg">Shop now</Button></Link>
                         </div>
                     </Col>
                 </Row>

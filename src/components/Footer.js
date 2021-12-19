@@ -38,7 +38,7 @@ const Styles = styled.div`
             
             h3 {
                 width: 65%;
-                text-align: right;
+                
                 line-height: 2.5rem;
                 
                 font-size: 1.4rem;
