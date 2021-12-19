@@ -13,7 +13,10 @@ const Styles = styled.div`
 
     .cart {
         
-        height: 60vh;
+        min-height: 70vh;
+        margin-top: 5rem;
+        padding: 0rem 3rem;
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,10 +26,7 @@ const Styles = styled.div`
         justify-content: space-between;
         margin-bottom: 1.5rem;
     }
-    .gray-bg {
-        background: #F9F9F9;
-        padding: 1.5rem;
-    }
+    
     .bank-logos {
         display: flex;
         
@@ -41,6 +41,11 @@ const Styles = styled.div`
         width: 50px;
         height: 50px;
         margin-right: 2rem;
+    }
+    .empty__bag {
+        h2 {
+            margin-bottom: 2rem;
+        }
     }
 `;
 
@@ -73,7 +78,7 @@ export const Basket = () => {
                             <Col md="8" sm="12">
                                 {cartElements}
                             </Col> :
-                            <Col md="8" sm="12">
+                            <Col md="8" sm="12" className="empty__bag">
 
 
                                 <h2>YOUR SHOPPING BAG IS EMPTY!</h2>
@@ -83,7 +88,7 @@ export const Basket = () => {
                             </Col>
                         }
 
-                        <Col md="4" sm="12" className="gray-bg">
+                        <Col md="4" sm="12">
                             <div className="total-area">
                                 <p>Order Value</p>
                                 <p>${totalPrice}</p>
