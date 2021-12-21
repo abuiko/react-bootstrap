@@ -12,7 +12,7 @@ import Youtube from "../assets/icons/youtube.png"
 const Styles = styled.div`
     
     .footer {
-        padding: 5rem 0rem;
+        padding: 6rem 0rem 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -34,7 +34,7 @@ const Styles = styled.div`
             }
         }
         &__newsletter {
-            text-align: right;
+            text-align: left;
             h3 {                              
                 line-height: 2.5rem;                
                 font-size: 1.2em;
@@ -71,7 +71,7 @@ const Styles = styled.div`
         }
     }
 
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 800px) {
         .footer__menu {
             order: 2;
             padding: 2rem;
@@ -98,6 +98,13 @@ const Styles = styled.div`
         .footer__menu {
             p {
                 font-size: 0.7rem;
+            }
+        }
+        .footer__icons {
+            margin-top: 0rem;
+            img {
+                
+                margin: 0.7rem;
             }
         }
     }

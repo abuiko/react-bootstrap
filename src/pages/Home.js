@@ -12,7 +12,7 @@ import Recommended from '../components/Recommended'
 
 const Styles = styled.div`
     .img-container {
-        padding-top: 3rem;
+        padding-top: 2rem;
     }
     .main__banner {
         margin: 0.2rem 0.2rem 1rem;

@@ -12,8 +12,7 @@ const Styles = styled.div`
 
     .recommended {
         background: #fff;
-        padding: 4rem 2rem 3rem;
-        margin-bottom: 3rem;
+        padding: 5rem 2rem;
         text-align: center;
         
         h2 {
@@ -25,12 +24,12 @@ const Styles = styled.div`
         &__group {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         .img__wrapper {
             position: relative;
-            width: 300px;
+            width: 15em;
             margin: 0.4rem;
 
             img {
@@ -53,6 +52,9 @@ const Styles = styled.div`
 
         
     }  
+    @media only screen and (max-width: 550px) {
+
+    }
 
 
 `;
