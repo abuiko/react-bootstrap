@@ -19,6 +19,7 @@ const Styles = styled.div`
             text-transform: uppercase;
             font-weight: normal;
             margin-bottom: 2rem;
+            font-size: 2rem;
         }
        
         &__group {
@@ -53,7 +54,9 @@ const Styles = styled.div`
         
     }  
     @media only screen and (max-width: 550px) {
-
+        .recommended h2 {
+            font-size: 1.5rem;
+        }
     }
 
 

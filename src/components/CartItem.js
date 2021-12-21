@@ -8,6 +8,7 @@ const Styles = styled.div`
     .cart__item {
         display: flex;
         margin-bottom: 1rem;
+        margin-right: 4rem;
         background-color: #F9F9F9;
         position: relative;
         align-items: center;
@@ -26,6 +27,37 @@ const Styles = styled.div`
             cursor: pointer;
             
         }
+    }
+    @media only screen and (max-width: 1000px) {
+        .cart__item {
+            margin-right: 0rem;
+        }
+        .item__img {
+            width: 90px;
+            
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        
+        .item__img {
+            width: 70px;
+            
+        }
+        .trash__icon {
+            font-size: 1rem;
+        }
+        .item__desc {
+            margin-left: 2rem;
+            h5, p {
+                font-size: 0.9rem;
+                
+            }
+            p {
+                margin-bottom: 0rem;
+            }
+        }
+       
     }
 `;
 
