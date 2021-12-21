@@ -5,7 +5,7 @@ import styled from "styled-components";
 import ClothesItem from '../components/ClothesItem';
 
 const Styles = styled.div`
-    .container {
+    .fav__container {
         margin-top: 5rem;
         position: relative;
         min-height: 70vh;
@@ -43,7 +43,7 @@ export const Favorites = () => {
     const favorite = favClothes.map(item => <ClothesItem key={item.id} item={item} />)
     return (
         <Styles>
-            <div className="container">
+            <div className="fav__container">
 
                 {favorite.length > 0 ?
                     <div>

@@ -12,8 +12,7 @@ import Youtube from "../assets/icons/youtube.png"
 const Styles = styled.div`
     
     .footer {
-        min-height: 70vh;
-        
+        padding: 5rem 0rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,27 +20,24 @@ const Styles = styled.div`
             justify-content: center;
             display: flex;
             div:first-child {
-                margin-right: 5rem;
-                
-                
+                margin-right: 5rem; 
             }
-
+            
             h4 {
                 font-size: 1.1rem;
                 margin-bottom: 1.3rem;
             }
             p {
                 font-size: 0.9rem;
+                
+                color: #000;
             }
         }
         &__newsletter {
-            
-            h3 {
-                width: 65%;
-                
-                line-height: 2.5rem;
-                
-                font-size: 1.4rem;
+            text-align: right;
+            h3 {                              
+                line-height: 2.5rem;                
+                font-size: 1.2em;
                 letter-spacing: 0.1rem;
                 margin-bottom: 1rem;
             }
@@ -74,6 +70,37 @@ const Styles = styled.div`
             }
         }
     }
+
+    @media only screen and (max-width: 550px) {
+        .footer__menu {
+            order: 2;
+            padding: 2rem;
+        }
+        .footer__newsletter {
+            text-align: center;
+            padding: 2rem;
+            order: 1;
+            h3 {
+                line-height: 2rem;                
+                font-size: 1.1em;
+                letter-spacing: 0rem;
+            }
+        }
+        .footer__icons {
+            margin-top: 0rem;
+            img {
+                width: 25px;
+                margin: 1.2rem;
+            }
+        }
+    }
+    @media only screen and (max-width: 300px) {
+        .footer__menu {
+            p {
+                font-size: 0.7rem;
+            }
+        }
+    }
 `;
 function Footer() {
     return (
@@ -85,15 +112,15 @@ function Footer() {
                         <Col md="6" sm="12" className="footer__menu">
                             <div>
                                 <h4>Shop</h4>
-                                <p>Dresses</p>
-                                <p>Tops</p>
-                                <p>Bottoms</p>
+                                <Link to="/clothes" style={{ textDecoration: 'none' }}><p>Dresses</p></Link>
+                                <Link to="/clothes" style={{ textDecoration: 'none' }}><p>Tops</p></Link>
+                                <Link to="/clothes" style={{ textDecoration: 'none' }}><p>Bottoms</p></Link>
                             </div>
                             <div>
                                 <h4>Menu</h4>
-                                <p>My Account</p>
-                                <p>My Favorites</p>
-                                <p>My Cart</p>
+                                <Link to="/user" style={{ textDecoration: 'none' }}><p>My Account</p></Link>
+                                <Link to="/favorites" style={{ textDecoration: 'none' }}><p>My Favorites</p></Link>
+                                <Link to="/basket" style={{ textDecoration: 'none' }}><p>My Account</p></Link>
                             </div>
                         </Col>
                         <Col md="6" sm="12" className="footer__newsletter">

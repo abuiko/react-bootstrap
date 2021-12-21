@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Row } from "react-bootstrap";
-import { Context } from "../Context"
+// import { Context } from "../Context"
 
 import Recom1 from "../assets/images/recom1.png";
 import Recom2 from "../assets/images/recom2.png";
@@ -59,8 +59,7 @@ const Styles = styled.div`
 
 
 function Recommended() {
-    const { allClothes } = useContext(Context)
-    const [recommended, setRecommended] = useState([])
+
 
 
 

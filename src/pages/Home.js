@@ -141,7 +141,7 @@ export const Home = () => {
                         <div>
                             <h3>GET HOLIDAY READY</h3>
                             <h2>UP TO 30% OFF</h2>
-                            <Link to="/clothes"><Button ckassName="banner__btn" type="button" variant="dark" size="lg">Shop now</Button></Link>
+                            <Link to="/clothes"><Button className="banner__btn" type="button" variant="dark" size="lg">Shop now</Button></Link>
                         </div>
                     </Col>
                 </Row>
